@@ -1,5 +1,11 @@
 import mongoose from "mongoose";
-let link = process.env.MONGO_URI;
-mongoose.connect(link)
-.then(()=>console.log('database connected'))
-.catch(error => console.log(error))
+
+async function connectDataBase(){
+    try {
+        await mongoose.connect(process.env.MONGO_URI)
+        console.log("Conectado correctamente")
+    } catch (error) {
+        console.log(error)
+    }
+}
+connectDataBase();
