@@ -3,5 +3,5 @@ export default(req,res)=>{
     succes: true,
     message: 'Manga'  
     })
-  
+
 }
